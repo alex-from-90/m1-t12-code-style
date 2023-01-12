@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class DepositCalculator {
+public class DepositCalculator { // Считаем процентную ставку
     double calculateComplexPercent(double a, double y, int d) {
         double pay = a * Math.pow((1 + y / 12), 12 * d);
         return rand(pay, 2);
@@ -18,7 +18,7 @@ public class DepositCalculator {
                 / scale;
     }
 
-    void viewMenuAndCalculatingIncome() {
+    void viewMenuAndCalculatingIncome() { //Узнаём входные даные и высчитываем сумму по окончанию вклада
         int period, action;
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите сумму вклада в рублях:");
