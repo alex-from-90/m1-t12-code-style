@@ -1,17 +1,19 @@
 import java.util.Scanner;
 
 public class DepositCalculator { // Считаем процентную ставку
-    double calculateComplexPercent(double a, double y, int d) {
+    double calculateComplexPercent(double a, double y, int d) { 
+        //вычисляеv комплексный процент по заданному вкладу, годовой процентной ставке и сроку вклада.
         double pay = a * Math.pow((1 + y / 12), 12 * d);
         return rand(pay, 2);
     }
 
-    double calculateSimplePercent(double Amount, double yearRate, int depositPeriod) {
+    double calculateSimplePercent(double Amount, double yearRate, int depositPeriod) { 
+        //вычисляем простой процент по заданному вкладу, годовой процентной ставке и сроку вклада.
         return rand(Amount + Amount * yearRate * depositPeriod, 2);
     }
 
-    double rand(double value
-            , int places) {
+    double rand(double value, int places) {
+        //округляем данное значение до указанного количества знаков после запятой.
         double scale = Math.pow
                 (10, places);
         return Math.round(value * scale)
